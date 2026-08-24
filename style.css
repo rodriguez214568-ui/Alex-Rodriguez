@@ -1,214 +1,286 @@
-
-/* 🌱 ESTILO AGRÍCOLA + TECNOLÓGICO 🌱 */
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  min-height: 100vh;
-  color: #f1f8e9;
-
-  /* Fondo tipo campo */
-  background:
-    linear-gradient(rgba(13, 38, 20, 0.88), rgba(20, 60, 28, 0.95)),
-    url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6")
-    center/cover fixed;
-
-  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  background: #f4f8ed;
+  color: #263b20;
 }
 
-/* 🌿 Título principal */
+/* MENÚ */
 
-h1 {
+header {
+  background: #1d5424;
+  color: white;
   text-align: center;
-  font-size: 45px;
-  color: #b7ff4a;
-  text-shadow:
-    0 0 10px #6dff00,
-    0 0 25px #2e7d32;
-
-  margin-bottom: 15px;
-  letter-spacing: 2px;
-}
-
-/* 🚜 Subtítulos */
-
-h2 {
-  text-align: center;
-  color: #d4ff80;
-  font-size: 25px;
-  margin: 25px 0 15px;
-}
-
-/* 🌱 Texto */
-
-p {
-  max-width: 750px;
-  margin: 20px auto;
   padding: 20px;
-
-  background: rgba(25, 70, 32, 0.75);
-  border-left: 5px solid #9ccc65;
-  border-radius: 15px;
-
-  font-size: 18px;
-  line-height: 1.6;
-
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-/* 🌾 Listas */
-
-ul,
-ol {
-  max-width: 650px;
-  margin: 20px auto;
-  padding: 20px 35px;
-
-  background: rgba(33, 77, 38, 0.85);
-  border-radius: 18px;
-
-  border: 1px solid #76a95b;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+header h1 {
+  margin-bottom: 15px;
 }
 
-li {
-  padding: 10px;
-  margin: 5px 0;
-  font-size: 17px;
-
-  transition: 0.3s;
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
-li:hover {
-  color: #b7ff4a;
-  transform: translateX(10px);
-}
-
-/* 🌱 Efecto especial para elementos de agricultura */
-
-ul li::marker {
-  color: #9ccc65;
-}
-
-ol li::marker {
-  color: #d4e157;
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 9px 14px;
+  border-radius: 10px;
   font-weight: bold;
 }
 
-/* 🚜 Imagen */
-
-img {
-  display: block;
-  width: min(500px, 90%);
-  height: 300px;
-  object-fit: cover;
-
-  margin: 30px auto;
-
-  border-radius: 25px;
-  border: 5px solid #7cb342;
-
-  box-shadow:
-    0 0 15px #76ff03,
-    0 15px 35px rgba(0, 0, 0, 0.6);
-
-  transition: 0.4s;
+nav a:hover {
+  background: #69a842;
 }
 
-img:hover {
-  transform: scale(1.04) rotate(1deg);
+/* INICIO */
 
-  box-shadow:
-    0 0 30px #b7ff4a,
-    0 20px 40px rgba(0, 0, 0, 0.7);
+.hero {
+  min-height: 480px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+
+  background:
+    linear-gradient(
+      rgba(30, 90, 35, 0.7),
+      rgba(70, 130, 55, 0.7)
+    );
 }
 
-/* 💻 Botón GitHub */
+.hero h2 {
+  font-size: 45px;
+  margin-bottom: 20px;
+}
 
-a {
-  display: block;
-  width: fit-content;
+.hero p {
+  font-size: 20px;
+  max-width: 650px;
+  margin-bottom: 30px;
+}
 
-  margin: 30px auto;
-  padding: 15px 30px;
-
-  color: #102015;
-  background: linear-gradient(135deg, #b7ff4a, #66bb6a);
-
+.boton {
+  background: #ffd447;
+  color: #263b20;
+  padding: 14px 25px;
+  border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 18px;
+}
 
-  border-radius: 30px;
+/* SECCIONES */
 
-  box-shadow:
-    0 5px 15px rgba(0, 0, 0, 0.4),
-    0 0 15px rgba(124, 255, 66, 0.4);
+.seccion {
+  padding: 70px 8%;
+  text-align: center;
+}
 
+.seccion h2,
+.potrero h2 {
+  font-size: 35px;
+  margin-bottom: 35px;
+}
+
+.verde {
+  background: #e1efd3;
+}
+
+/* TARJETAS */
+
+.tarjetas {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.tarjeta {
+  width: 280px;
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
   transition: 0.3s;
 }
 
-a:hover {
-  transform: translateY(-5px) scale(1.05);
-
-  background: linear-gradient(135deg, #d4ff80, #81c784);
-
-  box-shadow:
-    0 10px 25px rgba(0, 0, 0, 0.5),
-    0 0 30px #76ff03;
+.tarjeta:hover {
+  transform: translateY(-10px);
 }
 
-/* 🌿 Decoración general */
+.emoji {
+  font-size: 55px;
+  margin-bottom: 15px;
+}
 
-body::before {
-  content: "🌱  🚜  🌾  🌿  🌻  🌱";
-  display: block;
+.tarjeta h3 {
+  color: #28722e;
+  margin-bottom: 15px;
+}
+
+.tarjeta p {
+  line-height: 1.6;
+}
+
+/* POTRERO */
+
+.potrero {
+  padding: 60px 20px;
   text-align: center;
+  background: #bde68c;
+}
 
-  font-size: 30px;
+.campo {
+  height: 280px;
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 25px;
+
+  background:
+    linear-gradient(
+      #86cef0 0%,
+      #c4edff 55%,
+      #72b94e 56%,
+      #3d8c34 100%
+    );
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.sol {
+  position: absolute;
+  right: 60px;
+  top: 20px;
+  font-size: 55px;
+}
+
+/* VACAS */
+
+.vaca {
+  position: absolute;
+  left: -100px;
+  font-size: 65px;
+  animation-name: caminar;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.vaca1 {
+  top: 125px;
+  animation-duration: 9s;
+}
+
+.vaca2 {
+  top: 175px;
+  animation-duration: 13s;
+  animation-delay: 2s;
+}
+
+.vaca3 {
+  top: 90px;
+  animation-duration: 11s;
+  animation-delay: 4s;
+}
+
+@keyframes caminar {
+  0% {
+    left: -100px;
+  }
+
+  100% {
+    left: 110%;
+  }
+}
+
+/* PASTO */
+
+.pasto {
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  font-size: 28px;
+}
+
+/* SUEÑOS */
+
+.suenos {
+  padding: 70px 20px;
+  text-align: center;
+  background: #285c29;
+  color: white;
+}
+
+.suenos h2 {
+  font-size: 35px;
   margin-bottom: 20px;
-
-  animation: mover 3s infinite alternate;
 }
 
-@keyframes mover {
-  from {
-    transform: translateX(-10px);
-  }
-
-  to {
-    transform: translateX(10px);
-  }
+.suenos p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 20px;
+  line-height: 1.7;
 }
 
-/* 📱 Adaptación para celular */
+/* FOOTER */
+
+footer {
+  padding: 25px;
+  text-align: center;
+  background: #183b1c;
+  color: white;
+  line-height: 1.8;
+}
+
+/* CELULAR */
 
 @media (max-width: 600px) {
 
-  body {
-    padding: 25px 12px;
+  header h1 {
+    font-size: 25px;
   }
 
-  h1 {
+  nav a {
+    font-size: 13px;
+  }
+
+  .hero h2 {
     font-size: 32px;
   }
 
-  h2 {
-    font-size: 22px;
+  .seccion h2,
+  .potrero h2 {
+    font-size: 28px;
   }
 
-  p {
-    font-size: 16px;
+  .tarjeta {
+    width: 100%;
+    max-width: 330px;
   }
 
-  img {
-    height: 220px;
+  .vaca {
+    font-size: 50px;
   }
+
 }
-
-.tarjeta=< color:#00e5ff; text-transform: uppercase;>
